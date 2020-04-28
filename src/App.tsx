@@ -9,7 +9,8 @@ function App() {
     commodities,
     setSearch,
     setExchange,
-    exchangeTypes
+    exchangeTypes,
+    dataLoading
   } = useCommodities();
   return (
     <section className={baseStyles.root}>
@@ -18,7 +19,7 @@ function App() {
         setExchange={setExchange}
         exchangeTypes={exchangeTypes}
       />
-      <List commodities={commodities}/>
+      <List dataLoading={dataLoading} commodities={commodities}/>
     </section>
   );
 }

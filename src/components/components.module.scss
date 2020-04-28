@@ -1,0 +1,17 @@
+.loaderWrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loaderWrapperHidden {
+    opacity: 0;
+}

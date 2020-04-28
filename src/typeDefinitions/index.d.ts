@@ -12,7 +12,8 @@ type CommodityProps = {
 }
 
 type CommodityListProps = {
-    commodities: Array<Commodity>
+    commodities: Array<Commodity>,
+    dataLoading: boolean
 }
 
 type SearchBarProps = {
@@ -28,4 +29,8 @@ type FilterProps = {
 
 type SearchProps = {
     setSearch: function
+}
+
+type LoaderProps = {
+    loading: boolean
 }
