@@ -10,6 +10,7 @@
     font-size: 70%;
     > div {
         flex: 1;
+        margin: 0 10px;
         &:nth-child(2) {
             flex: 2;
         }

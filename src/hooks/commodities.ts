@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 export default function useCommodities() {
   const [data, setData] = useState<Array<Commodity>>([]);
@@ -11,13 +11,13 @@ export default function useCommodities() {
     .then(res => res.json())
     .then(json => {
       const exchangeOnlyVals:Array<string> = Array.from(new Set(json.map((x:Commodity) => x.stockExchange)));
-      setExchangeTypes(["N/A", ...exchangeOnlyVals])
+      setExchangeTypes(["Any", ...exchangeOnlyVals])
       setData(json.map((d:Commodity) => { return {...d, hashValue: Object.values(d).join(' ') }}));
     })
   }, []);
   useEffect(() => {
     const filteredCommodities = data.filter(commodity => {
-      if (exchange && exchange !== 'N/A' && commodity.stockExchange !== exchange) {
+      if (exchange && exchange !== 'Any' && commodity.stockExchange !== exchange) {
         return false;
       }
       if (search && commodity.hashValue && commodity.hashValue.indexOf(search) === -1) {
@@ -33,7 +33,8 @@ export default function useCommodities() {
     setSearch,
     exchange,
     setExchange,
-    exchangeTypes
+    exchangeTypes,
+    setData
   }
 };
 
