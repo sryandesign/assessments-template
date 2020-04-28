@@ -2,6 +2,13 @@
     flex: 1;
     padding: 10px;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
+    section {
+        flex:1;
+        overflow: auto;
+        border: thin solid #ececec;
+    }
 }
 
 .cellWrapper {
@@ -18,8 +25,7 @@
 }
 
 .commodityWrapper {
-    border: thin solid #ececec;
-    border-bottom: none;
+    border-top: thin solid #ececec;
     &:last-child {
         border-bottom: thin solid #ececec;
     }

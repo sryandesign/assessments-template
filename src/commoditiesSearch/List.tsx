@@ -6,12 +6,14 @@ export default function CommodityList({ commodities } : CommodityListProps) {
     return (
         <div className={comStyles.commodityListWrapper}>
             <CommodityListHeader />
-            {commodities.map(commodity => {
-                const { hashValue, ...sanitized } = commodity;
-                return (
-                    <Commodity key={sanitized.symbol} commodity={sanitized} />
-                )
-            })}
+            <section>
+                {commodities.map(commodity => {
+                    const { hashValue, ...sanitized } = commodity;
+                    return (
+                        <Commodity key={sanitized.symbol} commodity={sanitized} />
+                    )
+                })}
+            </section>
         </div>
     );
 }
