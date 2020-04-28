@@ -20,3 +20,12 @@ type SearchBarProps = {
     setExchange: function,
     exchangeTypes: Array<string>
 }
+
+type FilterProps = {
+    setExchange: function,
+    exchangeTypes: Array<string>
+}
+
+type SearchProps = {
+    setSearch: function
+}

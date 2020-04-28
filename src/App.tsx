@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommodityList, SearchBar } from './commoditiesSearch';
+import { List, SearchBar } from './commoditiesSearch';
 import baseStyles from './base.module.scss';
 import { useCommodities } from 'hooks';
 
@@ -18,7 +18,7 @@ function App() {
         setExchange={setExchange}
         exchangeTypes={exchangeTypes}
       />
-      <CommodityList commodities={commodities}/>
+      <List commodities={commodities}/>
     </section>
   );
 }
