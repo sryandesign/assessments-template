@@ -5,8 +5,8 @@ import styles from './components.module.scss';
 
 export default function Loader({ loading } : LoaderProps) {
     return (
-        <div className={loading ? styles.loaderWrapper : styles.loaderWrapperHidden}>
+        <section className={loading ? styles.loaderWrapper : styles.loaderWrapperHidden}>
             Loading ...
-        </div>
+        </section>
     );
 }
